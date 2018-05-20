@@ -3,6 +3,7 @@
 
 #include "position.h"
 #include "piece.h"
+#include "tile.h"
 
 class Pawn : Piece {
     
@@ -17,15 +18,23 @@ class Pawn : Piece {
     Pawn();
     ~Pawn();
 
-    void moveTo(Position) override;
-    void canMove(Position) override;
-    void capture(PieceType) override;
-    bool canCapture(PieceType, PieceType) override;
-    void updatePosition(PieceType) override;
-    void updateEnPassantStatus();
-    bool isEnPassantCapture(PieceType, Position);
-    void canCaptureEnPassant(PieceType, Position);
-    void updateCapturedStatus();
+    void moveTo(Tile) override;
+    void canMove(Tile) override;
+    void capture(Tile) override;
+    bool canCapture(Tile, Tile) override;
+
+    void setPosition(Tile) override;
+    Position getPosition() override;
+    void setCapturedStatus(bool);
+    bool getCapturedStatus();
+    void setFirstMoveStatus(bool);
+    bool getFirstMoveStatus();
+    void setEnPassantStatus(bool);
+    bool getEnPassantStatus();
+
+    bool isEnPassantCapture(Tile);
+    void canCaptureEnPassant(Tile);
+    
     void checkFirstMove();
 };
 

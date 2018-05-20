@@ -3,6 +3,7 @@
 
 #include "position.h"
 #include "piece.h"
+#include "tile.h"
 
 class Queen : Piece {
     
@@ -18,7 +19,7 @@ class Queen : Piece {
     void moveTo(Position) override;
     void canMove(Position) override;
     void capture(PieceType) override;
-    bool canCapture(PieceType, PieceType) override;
+    bool canCapture(Tile, Tile) override;
     void setPosition() override;
 };
 
