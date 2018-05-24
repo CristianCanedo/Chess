@@ -5,7 +5,7 @@
 #include "piece.h"
 #include "rook.h"
 
-class King : Piece {
+class King : public Piece {
     
     private:
     Color _color;
@@ -19,11 +19,11 @@ class King : Piece {
     King();
     ~King();
 
-    void moveTo(Position) override;
-    void canMove(Position) override;
-    void capture(PieceType) override;
-    bool canCapture(PieceType, PieceType) override;
-    void updatePosition(PieceType) override;
+    void moveTo(Tile) override;
+    void canMove(Tile) override;
+    void capture(Tile) override;
+    bool canCapture(Tile, Tile) override;
+    void setPosition(Tile) override;
     bool canCastle(Rook);
 
     void setCheck(bool);

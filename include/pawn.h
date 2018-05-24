@@ -5,7 +5,7 @@
 #include "piece.h"
 #include "tile.h"
 
-class Pawn : Piece {
+class Pawn : public Piece {
     
     private:
     Color _color;

@@ -8,12 +8,12 @@
 class Piece {
 
     public:
-    void virtual moveTo(Tile) = 0;
-    void virtual canMove(Tile) = 0;
-    void virtual capture(Tile) = 0;
-    bool virtual canCapture(Tile currPiece, Tile toCapture) = 0;
-    void virtual setPosition(Tile) = 0;
-    Position virtual getPosition() = 0;
+    void virtual moveTo(Tile);
+    void virtual canMove(Tile);
+    void virtual capture(Tile);
+    bool virtual canCapture(Tile currPiece, Tile toCapture);
+    void virtual setPosition(Tile);
+    Position virtual getPosition();
 
 };
 

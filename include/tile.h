@@ -5,6 +5,7 @@ struct Tile {
     Position pos;
     Color color;
     bool hasPiece;
+    Piece piece;
 };
 
 #endif // TILE_H

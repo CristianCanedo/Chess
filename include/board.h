@@ -1,9 +1,11 @@
 #ifndef BOARD_H
 #define BOARD_H
 
+#include "tile.h"
+
 class Board {
     private:
-    char* _board;
+    Tile* _board;
 
     public:
     Board();

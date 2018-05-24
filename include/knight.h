@@ -4,7 +4,7 @@
 #include "position.h"
 #include "piece.h"
 
-class Knight : Piece {
+class Knight : public Piece {
     
     private:
     Color _color;
@@ -15,11 +15,11 @@ class Knight : Piece {
     Knight();
     ~Knight();
 
-    void moveTo(Position) override;
-    void canMove(Position) override;
-    void capture(PieceType) override;
-    bool canCapture(PieceType, PieceType) override;
-    void updatePosition(PieceType) override;
+    void moveTo(Tile) override;
+    void canMove(Tile) override;
+    void capture(Tile) override;
+    bool canCapture(Tile, Tile) override;
+    void setPosition(Tile) override;
 };
 
 #endif // KNIGHT_H

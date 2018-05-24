@@ -5,22 +5,22 @@
 #include "piece.h"
 #include "tile.h"
 
-class Queen : Piece {
+class Queen : public Piece {
     
     private:
     Color _color;
-    Position _pos;
-    bool isCaptured;
+    Tile _pos;
+    Tile isCaptured;
 
     public:
     Queen();
     ~Queen();
 
-    void moveTo(Position) override;
-    void canMove(Position) override;
-    void capture(PieceType) override;
+    void moveTo(Tile) override;
+    void canMove(Tile) override;
+    void capture(Tile) override;
     bool canCapture(Tile, Tile) override;
-    void setPosition() override;
+    void setPosition(Tile) override;
 };
 
 #endif // QUEEN_H
